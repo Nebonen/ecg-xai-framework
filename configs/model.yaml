@@ -1,0 +1,22 @@
+model:
+    name: 'xresnet1d34'
+    n_leads: 12
+    n_classes: 5 # SB, SR, AF, ST, TWC
+    pretrained_weights: null # no pre-trained weights for this dataset
+    trained_weights: 'outputs/models/xresnet1d34_arrhythmia.pt'
+
+    # Name of the last convolutional layer — used as GradCAM / HiResCAM target.
+    # "7.2.convpath.1.0" = last Conv1d in the last residual block of xresnet1d34.
+    # signal_grad_cam requires an actual Conv1d layer, not a Sequential container.
+    target_layer: '7.2.convpath.1.0'
+
+fine_tuning:
+    enabled: false
+    learning_rate: 1.0e-4
+    epochs: 20
+    batch_size: 32
+    device: 'mps'
+
+inference:
+    batch_size: 64
+    device: 'mps'

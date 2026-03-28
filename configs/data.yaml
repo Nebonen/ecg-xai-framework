@@ -1,0 +1,30 @@
+dataset:
+  name: 'ecg-arrhythmia'
+  version: '1.0.0'
+  url: 'https://physionet.org/content/ecg-arrhythmia/1.0.0/'
+  raw_dir: 'data/raw/ecg-arrhythmia'
+
+signal:
+  sample_rate: 500
+  duration: 10 # seconds (all records are 10 s)
+  n_leads: 12
+
+labels:
+  task: 'arrhythmia_classification'
+  # Top 5 most frequent SNOMED-CT conditions (confirmed from frequency analysis)
+  classes: [SB, SR, AF, ST, TWC]
+  # SNOMED-CT code → acronym mapping file (shipped with the dataset)
+  snomed_mapping: 'ConditionNames_SNOMED-CT.csv'
+
+splits:
+  strategy: 'random'
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  seed: 42
+
+preprocessing:
+  bandpass_lowcut: 0.5 # Hz
+  bandpass_highcut: 40.0 # Hz
+  filter_order: 4
+  normalize: true # per-lead z-score normalisation

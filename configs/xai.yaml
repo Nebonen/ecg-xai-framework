@@ -1,0 +1,29 @@
+methods:
+  gradient_shap:
+    enabled: true
+    n_samples: 50
+    baseline: "noise"     # random noise distribution as background
+
+  kernel_shap:
+    enabled: true
+    n_segments: 100
+    nsamples: 500
+
+  hirescam:
+    enabled: true
+    # target_layer must match model.target_layer in model.yaml
+
+  gradcam:
+    enabled: true
+    # target_layer must match model.target_layer in model.yaml
+
+evaluation:
+  deletion_steps: 100     # number of masking steps for AOPC/deletion curve
+  baseline: "mean"        # value used when masking timesteps
+  include_random: true    # add random attribution baseline for comparison
+  aggregate_n_samples: 20 # number of samples for aggregate AOPC
+
+output:
+  save_attributions: true
+  attributions_dir: "outputs/explanations"
+  figures_dir: "outputs/figures"

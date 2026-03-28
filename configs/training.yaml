@@ -1,0 +1,10 @@
+training:
+    epochs: 100
+    batch_size: 64
+    learning_rate: 1.0e-4
+    weight_decay: 1.0e-4
+    gradient_clip: 1.0
+    early_stopping_patience: 20
+    scheduler: reduce_on_plateau
+    checkpoint_path: outputs/models/xresnet1d34_arrhythmia.pt
+    device: mps # change to cuda or mps if available, otherwise cpu

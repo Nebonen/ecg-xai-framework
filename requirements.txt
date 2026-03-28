@@ -1,0 +1,31 @@
+# Core scientific stack
+torch>=2.10.0
+numpy>=1.26.4,<2.0  # captum 0.8.0 requires numpy<2.0
+pandas>=3.0.1
+scipy>=1.17.1
+scikit-learn>=1.8.0
+matplotlib>=3.10.8
+seaborn>=0.13.2
+tqdm>=4.67.3
+pyyaml>=6.0.3
+
+# ECG data loading (PhysioNet)
+wfdb>=4.3.1
+neurokit2>=0.2.12
+
+# PTB-XL benchmark model loading
+fastai>=2.7.0
+
+# XAI — Captum (GradientSHAP)
+captum>=0.8.0
+
+# XAI — KernelSHAP (model-agnostic SHAP values)
+shap>=0.46.0,<0.50  # 0.50+ requires numpy>=2
+
+# XAI — HiResCAM / GradCAM for 1D signals
+signal_grad_cam>=2.0.0
+
+# Notebooks
+jupyter>=1.1.1
+ipykernel>=7.2.0
+ipywidgets>=8.1.8
