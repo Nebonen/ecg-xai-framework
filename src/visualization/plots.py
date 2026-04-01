@@ -86,7 +86,9 @@ def plot_method_comparison(
         ax.set_ylabel("Amplitude (mV)")
         plt.colorbar(sc, ax=ax, label="Attribution (normalised)")
 
-    axes[-1].set_xlabel("Time (s)")
+    for ax in axes:
+        ax.set_xlabel("Time (s)")
+        ax.tick_params(axis="x", labelbottom=True)
     plt.tight_layout()
     if save_path:
         fig.savefig(save_path, dpi=150, bbox_inches="tight")
