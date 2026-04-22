@@ -1,5 +1,7 @@
 # Interpretability Framework for Deep Learning Models in ECG Signal Analysis
 
+AI was used to assist with writing the code.
+
 ## Overview
 
 This repository contains the materials for a Bachelor of Engineering thesis in Information and Communication Technology (Health Technology major). The work addresses a critical gap in medical AI: the lack of transparency in deep learning models used for electrocardiogram (ECG) signal analysis.
