@@ -8,6 +8,8 @@ This repository contains the materials for a Bachelor of Engineering thesis in I
 
 While deep learning models have demonstrated strong performance in detecting cardiovascular conditions such as atrial fibrillation, their "black box" nature presents a significant barrier to clinical adoption. Healthcare professionals need to understand _why_ a model arrives at a particular diagnosis before they can trust and act on it. This thesis develops an interpretability framework that combines multiple explainability methods to provide clinically meaningful explanations for ECG-based AI decisions.
 
+The thesis can be found [here](https://urn.fi/URN:NBN:fi:amk-2026051311875). It is written in finnish, but with an english abstract.
+
 ## Problem Statement
 
 AI systems deployed in clinical settings must meet stringent requirements for transparency and reliability. The EU AI Act classifies medical AI systems as high-risk, requiring them to be sufficiently transparent for healthcare providers to interpret their outputs. Similarly, the Medical Device Regulation (MDR) imposes strict requirements on software used for diagnostic purposes. Current deep learning approaches for ECG analysis, while accurate, often fail to meet these interpretability requirements.
